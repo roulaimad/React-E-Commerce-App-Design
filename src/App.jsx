@@ -1,9 +1,11 @@
-import Product from "./pages/Product";
+import Comp from "./pages/Comp";
+import Login from "./pages/login";
+import Register from "./pages/Register";
 
 const App = () => {
   return (
     <div>
-      <Product />
+      <Login />
     </div>
   );
 };

@@ -104,7 +104,6 @@ const Button = styled.button`
 function Product() {
   return (
     <Container>
-      hi
       <Navbar />
       <Announcement />
       <Wrapper>
