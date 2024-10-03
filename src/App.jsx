@@ -1,6 +1,4 @@
-import Comp from "./pages/Comp";
-import Login from "./pages/login";
-import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
