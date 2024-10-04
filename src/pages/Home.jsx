@@ -10,8 +10,9 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <div>
+      <h1>hi</h1>
       <Announcement />
-      <Navbar />
+       <Navbar />
       <Slider />
       <Categories />
       <Products />

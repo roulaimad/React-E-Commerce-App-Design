@@ -1,17 +1,18 @@
+import styled from "styled-components";
+import { mobile } from "../responsive";
 import {
   Facebook,
   Instagram,
-  Mail,
   MailOutline,
   Phone,
   Pinterest,
   Room,
   Twitter,
 } from "@mui/icons-material";
-import React from "react";
-import styled from "styled-components";
+
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -20,6 +21,7 @@ const Left = styled.div`
   flex-direction: column;
   padding: 20px;
 `;
+
 const Logo = styled.h1``;
 
 const Desc = styled.p`
@@ -45,7 +47,9 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `;
+
 const Title = styled.h3`
   margin-bottom: 30px;
 `;
@@ -66,7 +70,9 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "#fff8f8" })}
 `;
+
 const ContactItem = styled.div`
   margin-bottom: 20px;
   display: flex;
@@ -74,18 +80,18 @@ const ContactItem = styled.div`
 `;
 
 const Payment = styled.img`
-  width: 40%;
+  width: 50%;
 `;
-function Footer() {
+
+const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>IMXD.</Logo>
+        <Logo>LAMA.</Logo>
         <Desc>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-          consectetur deserunt reiciendis et dignissimos illum harum ullam,
-          numquam incidunt reprehenderit inventore dolorem quisquam rem aliquam
-          voluptates sed. Eos, tenetur ab!
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don’t look even slightly believable.
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
@@ -112,29 +118,27 @@ function Footer() {
           <ListItem>Accessories</ListItem>
           <ListItem>My Account</ListItem>
           <ListItem>Order Tracking</ListItem>
-          <ListItem>Whishlist</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Wishlist</ListItem>
           <ListItem>Terms</ListItem>
-          <ListItem>Store</ListItem>
         </List>
       </Center>
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{ marginRight: "10px" }} />
-          622 Dixie Path , South Tobinchester 98336
+          <Room style={{ marginRight: "10px" }} /> 622 Dixie Path , South
+          Tobinchester 98336
         </ContactItem>
         <ContactItem>
-          <Phone style={{ marginRight: "10px" }} />
-          +1 234 58 98
+          <Phone style={{ marginRight: "10px" }} /> +1 234 56 78
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} />
-          contact@imxd.dev
+          <MailOutline style={{ marginRight: "10px" }} /> contact@lama.dev
         </ContactItem>
-        <Payment src="https://everestmechanical.com/wp-content/uploads/2022/02/cards-768x149-1.jpg" />
+        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
     </Container>
   );
-}
+};
 
 export default Footer;
